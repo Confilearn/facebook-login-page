@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="facebook.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Facebook Web</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="page__header">
+        <img src="facebook logo.svg" alt="" />
+        <p class="page__title">
+          Facebook helps you connect and share with the people in your life.
+        </p>
+      </div>
+
+      <div class="form">
+        <div class="page__body">
+          <p class="form__heading">Log in to Facebook</p>
+          <input type="email" placeholder="Email address" required />
+          <input type="password" placeholder="Password" required />
+          <a href="main.html">
+            <button class="btn btn--stretch btn--blue">Log in</button>
+          </a>
+          <div class="forget-pass">
+            <a
+              href="https://web.facebook.com/recover/initiate/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjg2OTg0NjEzLCJjYWxsc2l0ZV9pZCI6MzgxMjI5MDc5NTc1OTQ2fQ%3D%3D&ars=facebook_login"
+              class="form__reset"
+              target="_blank"
+              >Forgotten account?</a
+            >
+          </div>
+        </div>
+
+        <div class="create-acc">
+          <a href="https://facebook.com" target="_blank">
+            <button class="btn btn--green">Create new account</button>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,260 @@
+:root {
+  --primary-color: #1877f2;
+  --secondary-color: #42b72a;
+  --tertiary-color: #fff;
+  --accent-color: #e4e6eb;
+  --neutral-color: #1c1e21;
+  --complementary-color: #4b4f56;
+
+  --border-rad: 0.7rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  color: var(--neutral-color);
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Helvetica, sans-serif;
+  line-height: 20px;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background-color: var(--accent-color);
+  padding: 2rem;
+}
+
+.container {
+  max-width: 94rem;
+  margin: 0 auto;
+}
+
+.page__header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+img {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.page__title {
+  display: none;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+}
+
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .page__header {
+    display: grid;
+    place-content: center;
+    max-width: 40rem;
+  }
+
+  img {
+    max-width: 310px;
+    margin: 0 auto -1rem;
+  }
+
+  .page__title {
+    display: block;
+    margin-bottom: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .page__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  img {
+    max-width: 310px;
+    margin: 0 auto;
+    padding: 8rem 0 2rem;
+    margin: -2.8rem;
+  }
+
+  .page__title {
+    display: block;
+    padding-bottom: 2rem;
+    padding-right: 8rem;
+  }
+}
+
+.form {
+  max-width: 40rem;
+  background-color: var(--tertiary-color);
+  padding: 2.2rem;
+  text-align: center;
+  border-radius: var(--border-rad);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+
+.page__body {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.form__heading {
+  font-size: 2rem;
+  line-height: 24px;
+  color: var(--complementary-color);
+  margin: 0 0 2rem;
+}
+/* @media screen and (min-width: 900px) {
+  .form__heading {
+    display: none;
+  }
+} */
+
+input {
+  padding: 1.5rem 1rem;
+  border: 1.5px solid var(--accent-color);
+  border-radius: var(--border-rad);
+  width: 100%;
+  margin-bottom: 1.5rem;
+  font-size: 1.7rem;
+  line-height: 1.6rem;
+  transition: border 0.25s;
+}
+input:focus {
+  border: 1.9px solid var(--primary-color);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  display: block;
+  border: 0;
+  color: var(--tertiary-color);
+  border-radius: var(--border-rad);
+  padding: 0.25rem 3rem;
+  margin-bottom: 1.95rem;
+  cursor: pointer;
+  transition: opacity 0.35s;
+  font-size: 1.7rem;
+  line-height: 4.8rem;
+  font-weight: 700;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+.btn--stretch {
+  width: 100%;
+}
+.btn--blue {
+  background-color: var(--primary-color);
+  font-size: 2rem;
+}
+.btn--green {
+  background-color: var(--secondary-color);
+  margin: 2.5rem 0 0.5rem;
+}
+
+.forget-pass {
+  margin-bottom: 1.95rem;
+}
+
+.form__reset {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.form__reset:hover {
+  text-decoration: underline;
+}
+
+.create-acc {
+  display: flex;
+  justify-content: center;
+}
+
+/* MAIN */
+.container--sm {
+  max-width: 700px;
+  /* max-width: 94rem;
+  margin: 0 auto; */
+  width: 100%;
+}
+
+.form--sm {
+  width: 100%;
+  border-radius: var(--border-rad);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  background-color: var(--tertiary-color);
+  padding: 0;
+  text-align: left;
+}
+
+.display__heading {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-size: 600;
+  padding: 2rem;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.display__message {
+  font-size: 1.7rem;
+  line-height: 2rem;
+  padding: 2rem 2rem 4rem;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-group {
+  padding: 2rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.btn--sm {
+  display: block;
+  border: 0;
+  color: var(--tertiary-color);
+  border-radius: var(--border-rad);
+  padding: 0.25rem 1.75rem;
+  cursor: pointer;
+  color: var(--tertiary-color);
+  font-size: 1.5rem;
+  line-height: 3.6rem;
+  font-weight: 700;
+}
+.btn--sm:hover {
+  opacity: 0.8;
+}
+
+.btn--grey {
+  background-color: var(--accent-color);
+  color: var(--complementary-color);
+}
+
+/* TODO: CREATE & APPLY REUSEABLE CSS COMPONENTS NEXT TIME */
